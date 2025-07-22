@@ -3854,3 +3854,13 @@ img {
 input:checked + .slider:before {
   transform: translateX(26px);
 }
+
+.crisp-client .cc-1brb6 .cc-1yy0g .cc-1m2mf .cc-157aw {
+  width: 60px !important;
+  height: 60px !important;
+  display: block !important;
+  border-radius: 100% !important;
+  box-shadow: 0 4px 10px 0 rgba(var(--cc-tje44), 0.05) !important;
+  transition: transform 0.15s ease-in-out !important;
+  background: #78fd49 !important;
+}

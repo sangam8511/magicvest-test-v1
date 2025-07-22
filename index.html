@@ -158,49 +158,46 @@
     <script src="js/fpr.js" defer=""></script>
 
     <!-- Crisp -->
-    <script type="text/javascript">
-      window.$crisp = [];
-      window.CRISP_WEBSITE_ID = "4d8eef77-30c6-43b5-84db-88f97e7b7aad";
-      (function () {
-        d = document;
-        s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = 1;
-        d.getElementsByTagName("head")[0].appendChild(s);
-      })();
-    </script>
+    <!-- Crisp Chat with Auto Trigger -->
+<script type="text/javascript">
+  window.$crisp = [];
+  window.CRISP_WEBSITE_ID = "aec71941-e55b-4540-bade-ae3d99c06bd4";
+  (function () {
+    var d = document;
+    var s = d.createElement("script");
+    s.src = "https://client.crisp.chat/l.js";
+    s.async = 1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
 
-    <script>
-      // Ouvre Crisp si ?crisp et envoie le message "Extension"
-      (function () {
-        function triggerCrisp() {
-          const params = new URLSearchParams(location.search);
-          if (!params.has("crisp")) return;
+  // Trigger Crisp chat via URL (?crisp&msg=...&email=...)
+  (function () {
+    function triggerCrisp() {
+      const params = new URLSearchParams(location.search);
+      if (!params.has("crisp")) return;
 
-          const text = params.get("msg") || "Extension";
-          const email = params.get("email"); // ← facultatif, mais on le passe si dispo
+      const text = params.get("msg") || "Extension";
+      const email = params.get("email");
 
-          window.$crisp = window.$crisp || [];
+      window.$crisp = window.$crisp || [];
 
-          // 1️⃣  On déclare l’e-mail “officiel” du visiteur
-          if (email) {
-            $crisp.push(["set", "user:email", [email]]); // clé “user:email” obligatoire
-          }
+      if (email) {
+        $crisp.push(["set", "user:email", [email]]);
+      }
 
-          // 2️⃣  Restant de la logique
-          $crisp.push(["do", "chat:open"]);
-          $crisp.push(["do", "message:send", ["text", text]]);
-        }
+      $crisp.push(["do", "chat:open"]);
+      $crisp.push(["do", "message:send", ["text", text]]);
+    }
 
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", triggerCrisp);
-        } else {
-          triggerCrisp();
-        }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", triggerCrisp);
+    } else {
+      triggerCrisp();
+    }
 
-        window.addEventListener("popstate", triggerCrisp);
-      })();
-    </script>
+    window.addEventListener("popstate", triggerCrisp);
+  })();
+</script>
 
     <!-- Humblytics -->
     <script async="" src="js/hmbl.min.js"></script>
@@ -2633,11 +2630,13 @@
               <div class="nav_menu">
                 <div class="nav_menu_links">
                   <button data-menu-reveal="" class="navlink_wrap">
-                    <div href="#" data-module="features" class="navlink">
+                    <a data-menu-reveal="" href="/pricing.html" >
+                    <div href="" target="_blank" data-module="features" class="navlink">
                       <div>Pricing</div>
                      
                     </div>
-                    
+                   
+                    </a>
                   </button>
                   <button class="navlink_wrap">
                   <a data-menu-reveal="" href="https://blog.magicvest.ai/" target="_blank" >
@@ -2645,7 +2644,7 @@
                       <div>Blog</div>
                      
                     </div>
-                    
+                    </a>
                   </button>
                   <button class="navlink_wrap">
                   <a data-menu-reveal="" href="#faq">
@@ -4936,30 +4935,17 @@ magicvest.ai
                                 </div>
                               </div>
                             </div>
-                            <div
-                              data-video="playpause"
-                              class="ads_video_visual"
-                            >
-                              <img
-                                src="images/67f50565333e908d62541194_thumb_2.avif"
-                                loading="lazy"
-                                sizes="(max-width: 1200px) 100vw, 1200px"
-                                srcset="
-                                  images/67f50565333e908d62541194_thumb_2-p-500.avif  500w,
-                                  images/67f50565333e908d62541194_thumb_2-p-800.avif  800w,
-                                  images/67f50565333e908d62541194_thumb_2.avif       1200w
-                                "
-                                alt=""
-                                class="video_thumbnail"
-                              /><video
-                                muted=""
-                                loop=""
-                                webkit-playsinline="webkit-playsinline"
-                                src="media/video_ads.mp4"
-                                playsinline="playsinline"
-                                class="video_cover"
-                              ></video>
-                            </div>
+                            <div data-video="playpause" class="main_hero_video">
+                  <video
+                    class="video_thumbnail"
+                    src="asset/images/logo/section 2.mp4"
+                    poster="asset/images/logo/video-thumbnail.jpg" 
+                    playsinline
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
                           </div>
                         </div>
                       </div>
@@ -6987,13 +6973,13 @@ Email notifications
                     <div class="footer_nav_col">
                       <div class="weight-medium">Company</div>
                       <div class="flex-col gap-12">
-                        <a href="/use-cases/dropshipper" class="footer-link"
+                       <a href="./pricing.html" class="footer-link"
                           >Pricing</a
                         ><a
-                          href="https://www.magicvest.ai/#trends"
+                          href="#faq"
                           class="footer-link "
                           >FAQ</a
-                        ><a href="/use-cases/media-buyers" class="footer-link"
+                        ><a href="https://blog.magicvest.ai/" target="_blank" class="footer-link"
                           >Blog</a
                         >
                        
@@ -7015,7 +7001,7 @@ Email notifications
           <p class="text-light-white text-center">
             All content provided on our website, linked websites, applications, forums, blogs, social media accounts, and associated platforms with Magicvest is intended purely for informational purposes. We do not guarantee the accuracy or timeliness of the information. None of our content should be construed as financial, legal, or any other form of advice. Any reliance you place on our content is at your own risk. It is recommended that you conduct your own research, review, and verification before making decisions. Trading involves high risks and potential losses; therefore, it is advisable to consult with a financial advisor before taking any action. Nothing on our site should be interpreted as an invitation or offer to engage in any activity.
           </p>
-          <p class="text-white text-start mt-2">
+          <p class=" text-start mt-2" style="color:white !important">
             © 2024 Magicvest. All rights reserved.
         </div>
       </section>
@@ -7047,6 +7033,7 @@ Email notifications
         Flip
       );
     </script>
+   <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="aec71941-e55b-4540-bade-ae3d99c06bd4";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe

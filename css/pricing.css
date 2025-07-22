@@ -1,15 +1,99 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pricing-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* Header */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.green {
+  color: #4aff4a;
+  font-style: italic;
+}
+
+/* Toggle */
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.discount {
+  background: rgba(74, 255, 74, 0.15);
+  color: #4aff4a;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #4aff4a;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
 /* Pricing Card */
 .pricing-card {
-  background: linear-gradient(160deg, #101410, #0b0f0c);
+  background: linear-gradient(29deg, #101410, #1d2b1e);
   border: 1px solid #4aff4a;
-  box-shadow: 0 0 12px #4aff4a66;
+  box-shadow: 0 0 10px rgba(74, 255, 74, 0.2);
   border-radius: 16px;
   padding: 32px;
   max-width: 400px;
   width: 100%;
 }
 
-.header {
+.header-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,11 +104,11 @@
   color: black;
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 12px;
+  padding: 6px 10px;
+  border-radius: 22px;
 }
 
-.price {
+.price1 {
   font-size: 2.2rem;
   color: #4aff4a;
   margin: 20px 0 10px;
@@ -46,6 +130,8 @@
   font-size: 0.95rem;
   line-height: 1.8;
   margin-bottom: 24px;
+  padding: 0px;
+  color: white;
 }
 
 .cta {
@@ -64,7 +150,55 @@
   background-color: #3be73b;
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
+.text-white {
+  color: white;
+}
+/* Card Animation on Load */
+.pricing-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover glow effect */
+.pricing-card:hover {
+  box-shadow: 0 0 20px rgba(74, 255, 74, 0.25);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Button animation */
+.cta {
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  background-color: #3be73b;
+}
+
+/* Optional: animate each list item in */
+.features li {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInFeature 0.5s ease forwards;
+  animation-delay: calc(
+    0.3s + var(--i) * 0.05s
+  ); /* set inline via JS or manually */
+}
+
+/* Keyframe for features */
+@keyframes fadeInFeature {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
