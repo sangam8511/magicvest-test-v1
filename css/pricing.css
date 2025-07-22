@@ -1,0 +1,70 @@
+/* Pricing Card */
+.pricing-card {
+  background: linear-gradient(160deg, #101410, #0b0f0c);
+  border: 1px solid #4aff4a;
+  box-shadow: 0 0 12px #4aff4a66;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  background-color: #4aff4a;
+  color: black;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.price {
+  font-size: 2.2rem;
+  color: #4aff4a;
+  margin: 20px 0 10px;
+}
+
+.period {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.description {
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.features {
+  list-style: none;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.cta {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  background-color: #4aff4a;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background-color: #3be73b;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

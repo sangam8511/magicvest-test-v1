@@ -3746,7 +3746,7 @@ img {
   font-size: 16px;
 }
 .max-w-400px {
-  max-width: 400px;
+  max-width: 425px;
 }
 .bg-black {
   background-color: #000;
@@ -3774,13 +3774,83 @@ img {
 .video_thumbnail {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* or use 'contain' if you want full visibility */
+  object-fit: contain; /* or use 'contain' if you want full visibility */
   display: block;
 }
 .animated-heading {
   width: 22ch; /* tweak until it wraps into 2 lines on most screens */
   line-height: 1.2;
 }
+.fs-14 {
+  font-size: 14px !important;
+}
+
 /* .single-line {
   font-size: 56px;
 } */
+
+/* Pricing Page css */
+
+.green {
+  color: #4aff4a;
+  font-style: italic;
+}
+
+/* Toggle */
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.discount {
+  background: rgba(74, 255, 74, 0.15);
+  color: #4aff4a;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #4aff4a;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
