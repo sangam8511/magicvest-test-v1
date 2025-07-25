@@ -2779,12 +2779,12 @@ img {
     grid-row-gap: 0.5em;
     grid-template-rows: auto;
     grid-auto-columns: minmax(0, 1fr);
-    grid-template-columns: var(--grid-2);
+    /* grid-template-columns: var(--grid-2); */
     grid-column-gap: 0.5em;
     grid-row-gap: 0.5em;
     grid-template-rows: auto;
     grid-auto-columns: minmax(0, 1fr);
-    grid-template-columns: var(--grid-2);
+    /* grid-template-columns: var(--grid-2); */
     display: grid;
   }
   .nav_wrap {
@@ -2796,7 +2796,7 @@ img {
     border-radius: 1em;
     width: calc(100vw - 1em);
     max-height: calc(100dvh - 1em);
-    padding: 8em 2em 2em;
+    padding: 4em 2em 2em;
     display: none;
     position: absolute;
     top: 0.75em;
@@ -3021,7 +3021,7 @@ img {
     --_responsive---font-size--text-m: 1em;
     --_responsive---font-size--text-s: 0.875em;
     --_responsive---font-size--h1: 2.375em;
-    --_responsive---font-size--h2: 1.95em;
+    --_responsive---font-size--h2: 1.7em;
     --_responsive---font-size--h3: 1.5em;
     --_responsive---font-size--h4: 1.25rem;
     --_responsive---font-size--h5: 1.2rem;
@@ -3393,6 +3393,13 @@ img {
   .v_sep.cc-acces {
     width: 4em;
     height: 1px;
+    display: none;
+  }
+  .mob-text-specific {
+    font-size: 12px;
+  }
+  .flex-mob-row {
+    flex-direction: row !important;
   }
   .access_details.flex-row {
     grid-column-gap: 0.75em;
@@ -3678,6 +3685,9 @@ img {
 }
 .red-bg {
   background: #921a00;
+}
+.orange-bg {
+  background: #d35800;
 }
 .insider-card {
   border-radius: 20px;
