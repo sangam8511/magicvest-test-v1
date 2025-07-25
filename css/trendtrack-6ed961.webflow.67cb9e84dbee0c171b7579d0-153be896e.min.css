@@ -3447,6 +3447,9 @@ img {
   .analysis_visual.cc-country {
     left: 62.5%;
   }
+  .mob-h1 {
+    font-size: 2.4em !important;
+  }
   .marquee_graph_list {
     font-size: 0.725em;
   }
