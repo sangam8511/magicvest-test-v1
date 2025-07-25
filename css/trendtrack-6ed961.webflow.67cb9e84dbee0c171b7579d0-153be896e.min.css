@@ -3618,14 +3618,14 @@ img {
   background: #fff;
   border: 1px solid #eee;
   border-radius: 8px;
-  padding: 3px;
-  min-width: 65px;
+  padding: 5px;
+  min-width: 80px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .ticker-item img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   margin-bottom: 6px;
 }
