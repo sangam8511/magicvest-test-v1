@@ -3655,15 +3655,15 @@ img {
 
 /* Animations */
 .scroll-1 {
-  animation: scroll-left 40s linear infinite;
+  animation: scroll-left 130s linear infinite;
 }
 
 .scroll-2 {
-  animation: scroll-right 50s linear infinite;
+  animation: scroll-right 130s linear infinite;
 }
 
 .scroll-3 {
-  animation: scroll-left 35s linear infinite;
+  animation: scroll-left 130s linear infinite;
 }
 
 @keyframes scroll-left {
@@ -3876,4 +3876,13 @@ input:checked + .slider:before {
   box-shadow: 0 4px 10px 0 rgba(var(--cc-tje44), 0.05) !important;
   transition: transform 0.15s ease-in-out !important;
   background: #78fd49 !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.gap-10px {
+  gap: 10px !important;
+}
+.gap-5 {
+  gap: 5px !important;
 }
