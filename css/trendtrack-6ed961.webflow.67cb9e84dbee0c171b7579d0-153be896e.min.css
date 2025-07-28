@@ -3798,9 +3798,9 @@ img {
   width: 22ch; /* tweak until it wraps into 2 lines on most screens */
   line-height: 1.2;
 }
-.fs-14 {
+/* .fs-14 {
   font-size: 14px !important;
-}
+} */
 
 /* .single-line {
   font-size: 56px;
@@ -3890,7 +3890,7 @@ input:checked + .slider:before {
 .gap-5 {
   gap: 5px !important;
 }
-
+/* 
 .fs-12 {
   font-size: 12px !important  ;
-}
+} */
