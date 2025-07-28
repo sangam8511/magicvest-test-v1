@@ -3172,6 +3172,28 @@
 
     <!--🤙 https://slater.app/13488/33842.js-->
     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.billing-toggle input[type="checkbox"]');
+  const priceAmount = document.querySelector('.price1 .amount');
+  const pricePeriod = document.querySelector('.price1 .period');
+
+  const updatePricing = () => {
+    if (toggle.checked) {
+      priceAmount.textContent = '$39.99';
+      pricePeriod.textContent = '/Yearly (billed annually)';
+    } else {
+      priceAmount.textContent = '$49.99';
+      pricePeriod.textContent = '/Monthly';
+    }
+  };
+
+  // Update on load (in case toggle is pre-checked)
+  updatePricing();
+
+  // Listen for toggle changes
+  toggle.addEventListener('change', updatePricing);
+});
+
       document.addEventListener("DOMContentLoaded", function () {
         function loadscript(e) {
           let t = document.createElement("script");
