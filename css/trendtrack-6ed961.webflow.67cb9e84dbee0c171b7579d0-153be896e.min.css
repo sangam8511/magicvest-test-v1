@@ -3787,11 +3787,12 @@ img {
 }
 
 .video_thumbnail {
-      width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 12px;
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+  display: block;
+  border-radius: 15px;
+  margin-top: 37px;
 }
 .animated-heading {
   width: 22ch; /* tweak until it wraps into 2 lines on most screens */
