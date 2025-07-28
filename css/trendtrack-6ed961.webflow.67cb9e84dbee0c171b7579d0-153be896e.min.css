@@ -3611,6 +3611,8 @@ img {
   display: flex;
   gap: 12px;
   width: max-content;
+  left: 56px;
+  position: relative;
 }
 
 .ticker-item {
@@ -3885,4 +3887,8 @@ input:checked + .slider:before {
 }
 .gap-5 {
   gap: 5px !important;
+}
+
+.fs-12 {
+  font-size: 12px !important  ;
 }
